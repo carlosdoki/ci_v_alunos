@@ -27,7 +27,7 @@ steps:
     args:
       [
         "run",
-        "delpoy",
+        "deploy",
         "go-cloudrun",
         "--image",
         "gcr.io/lice-ci-cd/live-ci-cd:$SHORT_SHA",

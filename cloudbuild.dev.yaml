@@ -4,15 +4,15 @@ steps:
       [
         "build",
         "-t",
-        "docker.io/carlosdoki/live-ci-cd:latest",
+        "gcr.io/lice-ci-cd/live-ci-cd:latest",
         "-t",
-        "docker.io/carlosdoki/live-ci-cd:$SHORT_SHA",
+        "gcr.io/lice-ci-cd/live-ci-cd:$SHORT_SHA",
         ".",
       ]
 
   - name: "docker"
     args:
-      ["run", "-d", "--name", "goapp", "docker.io/carlosdoki/live-ci-cd:latest"]
+      ["run", "-d", "--name", "goapp", "gcr.io/lice-ci-cd/live-ci-cd:latest"]
 
   - name: "docker"
     args: ["exec", "goapp", "go", "test"]
